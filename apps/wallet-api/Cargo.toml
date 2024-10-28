@@ -1,0 +1,30 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+jsonwebtoken = "9.3.0"       # For handling JWTs
+walletd = "0.2"
+secp256k1 = "0.30.0"      # For ECDSA key handling
+ethers = "2.0.14"           # For Ethereum transaction signing
+ethers-core = "2.0.14"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }  # For async runtime
+warp = "0.3"  # For the web framework
+juniper = "0.16.1"
+juniper_warp = "0.8.0"  # For integration of Juniper with Warp
+vaultrs = "0.7.2"# For integration of Hashicorp Vault
+mongodb = "3.1.0"
+config = "0.14.1"
+dotenv = "0.15"
+chrono = { version = "0.4.38", features = ["serde"] }
+anyhow = "1.0.91"
+rand = "0.8.5"
+async-trait = "0.1.83"
+
+[[bin]]
+name = "wallet-api"
+path = "src/main.rs"
+

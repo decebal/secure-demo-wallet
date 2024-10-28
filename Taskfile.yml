@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  dev:
+    cmds:
+      - task: backend-dev
+      - task: web-dev
+
+  backend-dev:
+    dir: "{{.USER_WORKING_DIR}}/apps/fiber-wallet"
+    preconditions:
+      - test -f docker-compose.yml
+    cmds:
+      - docker compose up -d
+  web-dev:
+      cmds:
+        - bun run dev:web

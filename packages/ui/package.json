@@ -1,0 +1,54 @@
+{
+  "name": "@v1/ui",
+  "version": "0.1.0",
+  "private": true,
+  "sideEffects": false,
+  "files": ["tailwind.config.ts", "postcss.config.js", "globals.css"],
+  "scripts": {
+    "clean": "rm -rf .turbo node_modules",
+    "lint": "biome check .",
+    "format": "biome --write .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.43",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^3.4.10",
+    "typescript": "^5.5.4"
+  },
+  "exports": {
+    "./globals.css": "./src/globals.css",
+    "./animated-shiny-text": "./src/components/animated-shiny-text.tsx",
+    "./button": "./src/components/button.tsx",
+    "./card": "./src/components/card.tsx",
+    "./cn": "./src/utils/cn.ts",
+    "./dropdown-menu": "./src/components/dropdown-menu.tsx",
+    "./input": "./src/components/input.tsx",
+    "./label": "./src/components/label.tsx",
+    "./tooltip": "./src/components/tooltip.tsx",
+    "./dialog": "./src/components/dialog.tsx",
+    "./icon-cloud": "./src/components/icon-cloud.tsx",
+    "./icons": "./src/components/icons.tsx",
+    "./pagination": "./src/components/ui/pagination.tsx",
+    "./shimmer-button": "./src/components/shimmer-button.tsx",
+    "./table": "./src/components/table.tsx",
+    "./tailwind.config": "./tailwind.config.ts",
+    "./postcss": "./postcss.config.js"
+  },
+  "dependencies": {
+    "@radix-ui/react-dialog": "^1.1.1",
+    "@radix-ui/react-dropdown-menu": "^2.1.2",
+    "@radix-ui/react-label": "^2.0.2",
+    "@radix-ui/react-slot": "^1.1.0",
+    "@radix-ui/react-toast": "^1.2.2",
+    "@radix-ui/react-tooltip": "^1.1.2",
+    "class-variance-authority": "^0.7.0",
+    "lucide-react": "^0.438.0",
+    "next-themes": "^0.3.0",
+    "react-icon-cloud": "^4.1.4",
+    "tailwind-merge": "^2.5.2",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
